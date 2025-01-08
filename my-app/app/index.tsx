@@ -9,9 +9,9 @@ export default function Index() {
       {/* Text */}
       <Text style={styles.header}>Welcome to our menu!</Text> 
       {/* Restaurant Item */}
-      <RestaurantItem/>
-      <RestaurantItem/>
-      <RestaurantItem/>
+      <RestaurantItem title="Rest 1" />
+      <RestaurantItem title="Rest 2" />
+      <RestaurantItem title="Rest 3"/>
       <StatusBar style="auto"/>
     </View>
   );
