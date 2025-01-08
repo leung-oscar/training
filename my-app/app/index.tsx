@@ -1,19 +1,24 @@
 import { StatusBar } from "expo-status-bar";
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet, ScrollView } from "react-native";
 import RestaurantItem from "./components/RestaurantItem";
+import restaurants from "./restaurants.json";
 import React from "react";
 
 export default function Index() {
   return (
-    <View style={styles.container}>
+    <ScrollView
+      style={styles.container}
+      contentContainerStyle={styles.contentContainer}
+    >
       {/* Text */}
-      <Text style={styles.header}>Welcome to our menu!</Text> 
-      {/* Restaurant Item */}
-      <RestaurantItem title="Rest 1" />
-      <RestaurantItem title="Rest 2" />
-      <RestaurantItem title="Rest 3"/>
-      <StatusBar style="auto"/>
-    </View>
+      <Text style={styles.header}>Welcome to our menu!</Text>
+      {/* Restaurant Items */}
+      {restaurants.map((restaurant) => (
+        <RestaurantItem key={restaurant.id} restaurant={restaurant} />
+      ))}
+
+      <StatusBar style="auto" />
+    </ScrollView>
   );
 }
 
@@ -21,12 +26,15 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "lightgreen",
+  },
+  contentContainer: {
     alignItems: "center",
-    justifyContent: "center",
     padding: 10,
   },
   header: {
     fontSize: 42,
-    fontWeight: "bold", 
+    fontWeight: "bold",
+    textAlign: "center",
+    marginVertical: 20,
   },
 });
