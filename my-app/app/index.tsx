@@ -1,37 +1,35 @@
-import { Text, View, StyleSheet, ScrollView } from "react-native";
-import RestaurantItem from "./components/RestaurantItem";
-import restaurants from "./restaurants.json";
 import React from "react";
+import { StyleSheet, Text, View } from "react-native";
 
-export default function Index() {
+export default function Page() {
   return (
-    <ScrollView
-      style={styles.container}
-      contentContainerStyle={styles.contentContainer}
-    >
-      {/* Text */}
-      <Text style={styles.header}>Welcome to our menu!</Text>
-      {/* Restaurant Items */}
-      {restaurants.map((restaurant) => (
-        <RestaurantItem key={restaurant.id} restaurant={restaurant} />
-      ))}
-    </ScrollView>
+    <View style={styles.container}>
+      <View style={styles.main}>
+        <Text style={styles.title}>Hello World Oscar</Text>
+        <Text style={styles.subtitle}>This is the first page of your app.</Text>
+      </View>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "lightgreen",
-  },
-  contentContainer: {
     alignItems: "center",
-    padding: 10,
+    padding: 24,
   },
-  header: {
-    fontSize: 42,
+  main: {
+    flex: 1,
+    justifyContent: "center",
+    maxWidth: 960,
+    marginHorizontal: "auto",
+  },
+  title: {
+    fontSize: 64,
     fontWeight: "bold",
-    textAlign: "center",
-    marginVertical: 20,
+  },
+  subtitle: {
+    fontSize: 36,
+    color: "#38434D",
   },
 });
