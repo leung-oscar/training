@@ -15,7 +15,6 @@ const RestaurantItem = ({ restaurant }) => {
       <Text style={styles.dishesHeader}>Dishes:</Text>
       <FlatList
         data={restaurant.dishes}
-        // keyExtractor={(item) => item.name}
         renderItem={({ item }) => (
           <View style={styles.dishContainer}>
             <Text style={styles.dishName}>{item.name}</Text>
