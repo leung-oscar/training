@@ -17,6 +17,10 @@ const RestaurantItem = ({ restaurant }) => {
         data={restaurant.dishes}
         renderItem={({ item }) => (
           <View style={styles.dishContainer}>
+            <Image 
+                style={styles.image}
+                source={{ uri: item.image }}
+            />
             <Text style={styles.dishName}>{item.name}</Text>
             <Text style={styles.dishDescription}>{item.description}</Text>
             <Text style={styles.dishPrice}>${item.price.toFixed(2)}</Text>
