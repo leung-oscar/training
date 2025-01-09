@@ -22,7 +22,8 @@
       {
         "name": "U.S.A. Burger",
         "description": "Beef, gouda cheese, cheddar cheese, cooked ham, bacon, egg and salad.",
-        "price": 5.40
+        "price": 5.40,
+        "image": "https://m.media-amazon.com/images/I/71tBmITbJ2L.jpg"
       },
       {
         "name": "Slices of Llanero Cheese",

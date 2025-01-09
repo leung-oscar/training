@@ -1,4 +1,3 @@
-import { StatusBar } from "expo-status-bar";
 import { Text, View, StyleSheet, ScrollView } from "react-native";
 import RestaurantItem from "./components/RestaurantItem";
 import restaurants from "./restaurants.json";
@@ -16,8 +15,6 @@ export default function Index() {
       {restaurants.map((restaurant) => (
         <RestaurantItem key={restaurant.id} restaurant={restaurant} />
       ))}
-
-      <StatusBar style="auto" />
     </ScrollView>
   );
 }
