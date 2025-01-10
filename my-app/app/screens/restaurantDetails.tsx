@@ -2,6 +2,7 @@ import React from 'react';
 import {View, Text, Image, FlatList, StyleSheet} from 'react-native';
 import restaurants from '/workspaces/training/my-app/assets/data/restaurants.json'
 import { Ionicons } from '@expo/vector-icons';
+import DishListItems from '/workspaces/training/my-app/assets/components/dishListItem.jsx'
 
 const restaurant = restaurants[0];
 
@@ -22,6 +23,10 @@ const RestaurantDetailsPage = () => {
                 <Text style={styles.subtitle}>Delivery Fee {restaurant.deliveryFee}</Text>
                 <Text style={styles.subtitle}>Delivery Time ~{restaurant.minDeliveryTime}-{restaurant.maxDeliveryTime}</Text>
             </View>
+
+            <DishListItems dish={restaurant.dishes[0]} />
+            <DishListItems dish={restaurant.dishes[1]} />
+            <DishListItems dish={restaurant.dishes[2]} />
 
         </View>
 
