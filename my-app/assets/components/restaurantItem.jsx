@@ -1,15 +1,17 @@
 import React from "react";
 import { Text, View, StyleSheet, Image} from "react-native";
 
-const RestaurantItem = ({joop}) => {
+const RestaurantItem = ({restaurant}) => {
   return (
     <View style={styles.restaurantContainer}>
       <Image 
-        source={{uri: "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/uber-eats/restaurant1.jpeg"}}
+        source={{uri: restaurant.image}}
         style={styles.image}
       />
-      <Text style={styles.title}>{joop}</Text>
-      <Text style={styles.subtitle}>$5.99</Text>
+      <Text style={styles.title}>{restaurant.name}</Text>
+      <Text style={styles.subtitle}>Delivery Fee {restaurant.deliveryFee}</Text>
+      <Text style={styles.subtitle}>Delivery Time ~{restaurant.minDeliveryTime}-{restaurant.maxDeliveryTime}</Text>
+      
     </View>
   );
 }
