@@ -1,10 +1,12 @@
 import React from "react";
 import {View, StyleSheet} from "react-native";
-import HomeScreen from "/workspaces/training/my-app/app/screens/homescreen.tsx";
+import HomeScreen from "./screens/home";
+import RestaurantDetailsPage from "./screens/restaurantdetails";
 export default function Index() {
   return (
     <View style={styles.container}>
-      <HomeScreen/>
+      {/* <HomeScreen/> */}
+      <RestaurantDetailsPage/>
     </View>
   );
 }
