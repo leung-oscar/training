@@ -1,16 +1,10 @@
 import React from "react";
-import {FlatList, View, StyleSheet} from "react-native";
-import RestaurantItem from "/workspaces/training/my-app/assets/components/restaurantItem.jsx"
-import restaurant from "/workspaces/training/my-app/assets/data/restaurants.json"
+import {View, StyleSheet} from "react-native";
+import HomeScreen from "/workspaces/training/my-app/app/screens/homescreen.tsx";
 export default function Index() {
   return (
     <View style={styles.container}>
-      {/* Restaurant Items */}
-      <FlatList
-        data={restaurant}
-        renderItem={({item}) => <RestaurantItem restaurant={item}/>}
-        showsVerticalScrollIndicator={false}
-      />
+      <HomeScreen/>
     </View>
   );
 }
