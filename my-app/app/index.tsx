@@ -6,10 +6,11 @@ export default function Index() {
   return (
     <View style={styles.container}>
       {/* Restaurant Item */}
-        <RestaurantItem/>
-        <RestaurantItem/>
-        <RestaurantItem/>
-        <RestaurantItem/>
+        <RestaurantItem joop = "joop joop1"/>
+        <RestaurantItem joop = "joop joop2"/>
+        <RestaurantItem joop = "joop joop3"/>
+        <RestaurantItem joop = "joop joop4"/>
+
     </View>
   );
 }
@@ -21,22 +22,5 @@ const styles = StyleSheet.create({
     alignItems:"center",
     justifyContent:"center",
     padding:10,
-  },
-  restaurantContainer:{
-    width: "100%",
-    marginVertical:5,
-  },
-  image:{
-    width: "100%",
-    aspectRatio: 5/3,
-    marginBottom:5,
-  },
-  title:{
-    fontSize:20,
-    fontWeight:"bold",
-    marginVertical:5
-  },
-  subtitle:{
-    color:"gray"
   }
 })
