@@ -3,7 +3,7 @@ import {View, FlatList} from 'react-native';
 import restaurants from '/workspaces/training/my-app/assets/data/restaurants.json'
 import { Ionicons } from '@expo/vector-icons';
 import DishListItem from '/workspaces/training/my-app/assets/components/dishListItem.jsx';
-import header from '/workspaces/training/my-app/app/screens/ResaurantDetailsScreen/header.tsx'
+import Header from '/workspaces/training/my-app/app/screens/ResaurantDetailsScreen/header.tsx'
 import styles from '/workspaces/training/my-app/app/screens/ResaurantDetailsScreen/styles.tsx';
 
 const restaurant = restaurants[0];
@@ -19,7 +19,7 @@ const RestaurantDetailsPage = () => {
                 style={styles.iconContainer}
             />
             <FlatList
-                ListHeaderComponent={header}
+                ListHeaderComponent={() => <Header restaurant={restaurant}/>}
                 data={restaurant.dishes}
                 renderItem={({item})=> <DishListItem dish={item}/> }
             />

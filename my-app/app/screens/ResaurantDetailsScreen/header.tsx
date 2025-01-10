@@ -1,11 +1,10 @@
 import React from 'react';
 import {View, Text, Image} from 'react-native';
-import restaurants from '/workspaces/training/my-app/assets/data/restaurants.json'
 import styles from '/workspaces/training/my-app/app/screens/ResaurantDetailsScreen/styles.tsx';
 
-const restaurant = restaurants[0];
 
-const RestaurantDetailsPage = () => {
+
+const RestaurantHeader = ({restaurant}) => {
     return (
         <View style={styles.page}>
 
@@ -24,4 +23,4 @@ const RestaurantDetailsPage = () => {
 
 
 
-export default RestaurantDetailsPage;
+export default RestaurantHeader;
