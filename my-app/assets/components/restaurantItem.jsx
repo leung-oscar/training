@@ -70,10 +70,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  ratingText: {
-    fontSize: 14,
-    fontWeight: "bold",
-  },
 });
 
   
