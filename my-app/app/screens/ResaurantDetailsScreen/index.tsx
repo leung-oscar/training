@@ -2,8 +2,9 @@ import React from 'react';
 import {View, Text, Image, FlatList, StyleSheet} from 'react-native';
 import restaurants from '/workspaces/training/my-app/assets/data/restaurants.json'
 import { Ionicons } from '@expo/vector-icons';
-import DishListItems from '/workspaces/training/my-app/assets/components/dishListItem.jsx'
 import DishListItem from '/workspaces/training/my-app/assets/components/dishListItem.jsx';
+import header from '/workspaces/training/my-app/app/screens/ResaurantDetailsScreen/header.tsx'
+
 
 const restaurant = restaurants[0];
 
@@ -17,22 +18,12 @@ const RestaurantDetailsPage = () => {
                 color="white"
                 style={styles.iconContainer}
             />
-            <Image source={{uri:restaurant.image}} style={styles.image}/>
-
-            <View style={styles.container}>
-                <Text style={styles.title}>{restaurant.name}</Text>
-                <Text style={styles.subtitle}>Delivery Fee {restaurant.deliveryFee}</Text>
-                <Text style={styles.subtitle}>Delivery Time ~{restaurant.minDeliveryTime}-{restaurant.maxDeliveryTime}</Text>
-            </View>
-            
             <FlatList
+                ListHeaderComponent={header}
                 data={restaurant.dishes}
                 renderItem={({item})=> <DishListItem dish={item}/> }
             />
-
-
         </View>
-
     )
 }
 

@@ -1,7 +1,7 @@
 import React from "react";
 import {View, StyleSheet} from "react-native";
 import HomeScreen from "./screens/home";
-import RestaurantDetailsPage from "./screens/restaurantDetails";
+import RestaurantDetailsPage from "./screens/ResaurantDetailsScreen";
 export default function Index() {
   return (
     <View style={styles.container}>
