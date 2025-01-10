@@ -1,24 +1,13 @@
 import React from "react";
 import { Text, View, StyleSheet, Image} from "react-native";
-
-const RestaurantItem = () => {
-  return (
-    <View style={styles.restaurantContainer}>
-      <Image 
-        source={{uri: "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/uber-eats/restaurant1.jpeg"}}
-        style={styles.image}
-      />
-      <Text style={styles.title}>Burger King</Text>
-      <Text style={styles.subtitle}>$5.99</Text>
-    </View>
-  );
-}
-
+import RestaurantItem from "/workspaces/training/my-app/assets/components/restaurantItem.jsx"
 
 export default function Index() {
   return (
     <View style={styles.container}>
       {/* Restaurant Item */}
+        <RestaurantItem/>
+        <RestaurantItem/>
         <RestaurantItem/>
         <RestaurantItem/>
     </View>
