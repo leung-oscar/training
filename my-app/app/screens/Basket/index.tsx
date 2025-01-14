@@ -4,53 +4,38 @@ import { AntDesign } from '@expo/vector-icons';
 import { useState } from 'react';
 
 import restaurants from '/workspaces/training/my-app/assets/data/restaurants.json'
-const dish = restaurants[0].dishes[0];
+import { FlatList } from 'react-native-gesture-handler';
+// const dish = restaurants[0].dish[0];
+const restaurant = restaurants[0];
 
-const DishDetailsScreen = () => {
-
-    // const [value,setter] = useState();
-    const [quantity,setQuantity] = useState(1);
-
-    const onMinus = () => {
-        if(quantity > 1)
-            setQuantity(quantity - 1)
-    }
-    const onPlus = () => {
-        setQuantity(quantity + 1)
-    }
-
-    const getTotal = () => {
-        return(dish.price * quantity).toFixed(2)
-    }
-    
+const BasketDishItem = ({basketDish}) => {
     return (
-        <View style={styles.page}>
-
-
-            <Text style={styles.name}>{dish.name}</Text>
-            <Text style={styles.description}>{dish.description}</Text>
-            
-            <Text style={styles.separator}/>
-
-
-            <View style={styles.row}>
-                <AntDesign name="minuscircle" size={60} color={"black"} onPress={onMinus} />
-                <Text style={styles.quantityText}>{quantity}</Text>
-                <AntDesign name="pluscircle" size={60} color={"black"} onPress={onPlus} />
-            </View>
-
-
-            <View style={styles.button}>
-                <Text style={styles.buttonText}>Add {quantity} items to basket. (${getTotal()})</Text>
-            </View>
-
+        <View>
+            <Text> {basketDish.name} </Text>
+            <Text> {basketDish.price} </Text>
         </View>
-
-
     )
 }
 
-export default DishDetailsScreen
+const Basket = () => {
+    return (
+        <View style={styles.page}>
+            <Text>{restaurant.name}</Text>
+            <Text>Your Items</Text>
+            <FlatList
+                data={restaurant.dishes}
+                renderItem={({item}) => <BasketDishItem basketDish={item} />}
+            />
+            <View style={styles.separator}></View>
+            <View style={styles.button}>
+                <Text style={styles.buttonText}>Create order</Text>
+            </View>
+            
+        </View>
+    )
+}
+
+export default Basket
 
 const styles = StyleSheet.create({
     page: {
