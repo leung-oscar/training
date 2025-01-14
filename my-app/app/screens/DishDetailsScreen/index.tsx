@@ -22,6 +22,8 @@ const DishDetailsScreen = () => {
     
     return (
         <View style={styles.page}>
+
+
             <Text style={styles.name}>{dish.name}</Text>
             <Text style={styles.description}>{dish.description}</Text>
             <Text style={styles.separator}/>
@@ -33,6 +35,10 @@ const DishDetailsScreen = () => {
                 <AntDesign name="pluscircle" size={60} color={"black"} onPress={onPlus} />
             </View>
 
+
+            <View style={styles.button}>
+                <Text style={styles.buttonText}>Add {quantity} items to basket</Text>
+            </View>
 
         </View>
 
@@ -47,7 +53,7 @@ const styles = StyleSheet.create({
         flex: 1,
         width: "100%",
         paddingVertical: 30,
-        paddingHorizontal: 20, // Add padding for horizontal spacing
+        paddingHorizontal: 20,
     },
     name: {
         fontSize: 30,
@@ -56,7 +62,7 @@ const styles = StyleSheet.create({
     },
     description: {
         color: "black",
-        marginBottom: 20, // Add margin to separate description from the row
+        marginBottom: 20,
     },
     separator: {
         height: 1,
@@ -66,11 +72,21 @@ const styles = StyleSheet.create({
     row: {
         flexDirection: "row",
         alignItems: "center",
-        justifyContent: "space-between", // Space out items evenly
-        paddingHorizontal: 20, // Add horizontal padding within the row
     },
     quantityText: {
-        fontSize: 24, // Increase font size for better visibility
-        marginHorizontal: 5, // Smaller margin between the text and icons
+        fontSize: 24,
+        marginHorizontal: 10,
+    },
+    button: {
+        backgroundColor: "#f08a5d", // Example background color
+        padding: 15, // Padding inside the button
+        borderRadius: 10, // Rounded corners
+        alignItems: "center", // Center text horizontally
+        marginTop: 20, // Margin to create space above the button
+    },
+    buttonText: {
+        fontSize: 18, // Font size for the button text
+        fontWeight: "bold", // Bold text
+        color: "#ffffff", // Text color (white)
     }
 });
