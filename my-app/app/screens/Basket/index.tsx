@@ -24,6 +24,7 @@ const Basket = () => {
             <FlatList
                 data={restaurant.dishes}
                 renderItem={({ item }) => <BasketDishItem basketDish={item} />}
+                keyExtractor={(item) => item.name} // Ensure each item has a unique key
             />
             <View style={styles.separator}></View>
             <View style={styles.button}>
