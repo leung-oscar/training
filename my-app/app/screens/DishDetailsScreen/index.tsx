@@ -72,6 +72,7 @@ const styles = StyleSheet.create({
     row: {
         flexDirection: "row",
         alignItems: "center",
+        justifyContent: "space-between", // Space out items evenly
     },
     quantityText: {
         fontSize: 24,
