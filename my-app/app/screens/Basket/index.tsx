@@ -27,6 +27,8 @@ const Basket = () => {
                 keyExtractor={(item) => item.name} // Ensure each item has a unique key
             />
             <View style={styles.separator}></View>
+            <View>Subtotal</View>
+            <View>Total</View>
             <View style={styles.button}>
                 <Text style={styles.buttonText}>Create order</Text>
             </View>
