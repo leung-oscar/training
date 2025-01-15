@@ -5,6 +5,7 @@ import RestaurantDetailsPage from "./screens/ResaurantDetailsScreen";
 import DishDetailsScreen from "./screens/DishDetailsScreen";
 import Basket from "./screens/Basket";
 import OrderScreen from "/workspaces/training/my-app/app/screens/OrdersScreen/index.tsx"
+import OrderDetails from "./screens/OrderDetails";
 
 export default function Index() {
   return (
@@ -13,7 +14,8 @@ export default function Index() {
       {/* <RestaurantDetailsPage/> */}
       {/* <DishDetailsScreen/> */}
       {/* <Basket></Basket> */}
-      <OrderScreen></OrderScreen>
+      {/* <OrderScreen></OrderScreen> */}
+      <OrderDetails></OrderDetails>
     </View>
   );
 }
