@@ -7,7 +7,7 @@ const order = orders[0]
 
 const OrderScreen = () => {
     return (
-        <View>
+        <View style={{flex:1,width:"100%",paddingTop:50}}>
             <FlatList
                 data={orders}
                 renderItem={({item}) => <OrderListItems order={item}/>}
