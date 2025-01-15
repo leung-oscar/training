@@ -13,9 +13,9 @@ export default function Index() {
       {/* <HomeScreen/> */}
       {/* <RestaurantDetailsPage/> */}
       {/* <DishDetailsScreen/> */}
-      {/* <Basket></Basket> */}
+      <Basket></Basket>
       {/* <OrderScreen></OrderScreen> */}
-      <OrderDetails></OrderDetails>
+      {/* <OrderDetails></OrderDetails> */}
     </View>
   );
 }
