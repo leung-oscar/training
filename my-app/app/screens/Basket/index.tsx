@@ -2,19 +2,11 @@ import React from 'react';
 import { View, Text, StyleSheet, FlatList } from 'react-native';
 import { AntDesign } from '@expo/vector-icons'; // Imported but not used
 import { useState } from 'react'; // Imported but not used
+import BasketDishItem from '/workspaces/training/my-app/assets/components/BasketDishItem.jsx/index.tsx'
 
 import restaurants from '/workspaces/training/my-app/assets/data/restaurants.json';
 // const dish = restaurants[0].dish[0];
 const restaurant = restaurants[0];
-
-const BasketDishItem = ({ basketDish }) => {
-    return (
-        <View style={styles.dishItem}>
-            <Text style={styles.dishName}>{basketDish.name}</Text>
-            <Text style={styles.dishPrice}>${basketDish.price}</Text>
-        </View>
-    );
-};
 
 const Basket = () => {
     return (

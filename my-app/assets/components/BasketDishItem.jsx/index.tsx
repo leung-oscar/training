@@ -1,56 +1,52 @@
 import React from 'react';
-import { View, Text, StyleSheet, FlatList } from 'react-native';
-import { AntDesign } from '@expo/vector-icons'; // Imported but not used
-import { useState } from 'react'; // Imported but not used
+import { View, Text, StyleSheet } from 'react-native';
 
-import restaurants from '/workspaces/training/my-app/assets/data/restaurants.json';
-// const dish = restaurants[0].dish[0];
-const restaurant = restaurants[0];
+// Define the type for a single dish
+interface BasketDish {
+    name: string;
+    price: number;
+}
 
-const BasketDishItem = ({ basketDish }) => {
+// Define the type for the props of BasketDishItem
+interface BasketDishItemProps {
+    basketDish: BasketDish;
+}
+
+const BasketDishItem = ({ basketDish }: BasketDishItemProps) => {
     return (
         <View style={styles.dishItem}>
             <Text style={styles.dishName}>{basketDish.name}</Text>
-            <Text style={styles.dishPrice}>${basketDish.price}</Text>
+            <Text style={styles.dishPrice}>${basketDish.price.toFixed(2)}</Text>
         </View>
     );
 };
 
-export default BasketDishItem
+export default BasketDishItem;
 
 const styles = StyleSheet.create({
-    name: {
-        fontSize: 30,
-        fontWeight: '600',
-        marginVertical: 10,
-    },
-    button: {
-        backgroundColor: '#f08a5d',
-        padding: 15,
-        borderRadius: 10,
-        alignItems: 'center',
-        marginTop: 20,
-    },
-    buttonText: {
-        fontSize: 18,
-        fontWeight: 'bold',
-        color: '#ffffff',
-    },
     dishItem: {
         flexDirection: 'row',
         justifyContent: 'space-between',
+        alignItems: 'center',
         marginBottom: 10,
-        paddingVertical: 10,
+        paddingVertical: 12,
         paddingHorizontal: 15,
-        backgroundColor: '#f4f4f4',
+        backgroundColor: '#ffffff',
         borderRadius: 8,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 1 },
+        shadowOpacity: 0.1,
+        shadowRadius: 4,
+        elevation: 2,
     },
     dishName: {
         fontSize: 16,
         fontWeight: '500',
+        color: '#333',
     },
     dishPrice: {
         fontSize: 16,
-        color: 'green',
+        fontWeight: '600',
+        color: '#28a745', // Bright green color
     },
 });
