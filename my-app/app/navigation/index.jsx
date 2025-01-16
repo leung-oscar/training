@@ -14,9 +14,9 @@ const Stack = createNativeStackNavigator();
 
 const RootNavigator = () => {
   return (
-    <Stack.Navigator initialRouteName='Restaurant'>
-      <Stack.Screen name="Home" component={HomeScreen}/>
-      <Stack.Screen name="Restaurant" component={RestaurantDetailsScreen}/>
+    <Stack.Navigator initialRouteName='Home'>
+      <Stack.Screen name="Home" component={HomeScreen}options={{title:"HomeScreen"}}/>
+      <Stack.Screen name="Restaurant" component={RestaurantDetailsScreen} options={{title:"RestaurantDetailsScreen"}}/>
     </Stack.Navigator>
   );
 };
