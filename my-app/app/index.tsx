@@ -1,31 +1,14 @@
-import React from "react";
-import {View, StyleSheet} from "react-native";
-import HomeScreen from "./screens/home";
-import RestaurantDetailsPage from "./screens/ResaurantDetailsScreen";
-import DishDetailsScreen from "./screens/DishDetailsScreen";
-import Basket from "./screens/Basket";
-import OrderScreen from "/workspaces/training/my-app/app/screens/OrdersScreen/index.tsx"
-import OrderDetails from "./screens/OrderDetails";
+import React from 'react';
+import { NavigationContainer, NavigationIndependentTree } from '@react-navigation/native';
+import RootNavigator from "/workspaces/training/my-app/app/navigation/index.jsx"
+
 
 export default function Index() {
   return (
-    <View style={styles.container}>
-      {/* <HomeScreen/> */}
-      {/* <RestaurantDetailsPage/> */}
-      {/* <DishDetailsScreen/> */}
-      <Basket></Basket>
-      {/* <OrderScreen></OrderScreen> */}
-      {/* <OrderDetails></OrderDetails> */}
-    </View>
+    <NavigationIndependentTree>
+      <NavigationContainer>
+        <RootNavigator />
+      </NavigationContainer>
+    </NavigationIndependentTree>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex:1,
-    backgroundColor: "lightblue", 
-    alignItems:"center",
-    justifyContent:"center",
-    padding:10,
-  }
-})

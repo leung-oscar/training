@@ -2,6 +2,7 @@ import React from "react";
 import { Text, View, StyleSheet, Image} from "react-native";
 
 const RestaurantItem = ({restaurant}) => {
+  
   return (
     <View style={styles.restaurantContainer}>
       <Image 

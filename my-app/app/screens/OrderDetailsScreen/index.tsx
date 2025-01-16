@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, Image, FlatList, StyleSheet} from 'react-native';
 import orders from "/workspaces/training/my-app/assets/data/orders.json"
-import styles from "/workspaces/training/my-app/app/screens/OrderDetails/styles.tsx"
+import styles from "./styles"
 import restaurants from "/workspaces/training/my-app/assets/data/restaurants.json"
 import DishListItem from '@/assets/components/dishListItem';
 import OrderListItem from '@/assets/components/orderListItem';
