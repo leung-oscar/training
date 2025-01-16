@@ -6,10 +6,18 @@ import DishListItem from '/workspaces/training/my-app/assets/components/dishList
 import Header from '/workspaces/training/my-app/app/screens/ResaurantDetailsScreen/header.tsx'
 import styles from '/workspaces/training/my-app/app/screens/ResaurantDetailsScreen/styles.tsx';
 
+import { useRoute } from '@react-navigation/native';
+
 const restaurant = restaurants[0];
 
 
 const RestaurantDetailsPage = () => {
+    const route = useRoute();
+    const id = route.params?.id;
+    console.warn(id);
+
+
+
     return (
         <View style={styles.page}>
             <Ionicons

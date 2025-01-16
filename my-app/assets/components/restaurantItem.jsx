@@ -1,10 +1,15 @@
+import { useNavigation } from "expo-router";
 import React from "react";
 import { Text, View, StyleSheet, Image, Pressable} from "react-native";
 
+
+
+
 const RestaurantItem = ({restaurant}) => {
   
+  const navigation = useNavigation()
   const onPress = () => {
-    console.warn("pressed")
+    navigation.navigate("Restaurant" , {id:restaurant.id});
   }
 
   return (
